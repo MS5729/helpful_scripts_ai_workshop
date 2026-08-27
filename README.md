@@ -19,6 +19,7 @@ These scripts make the workshop easier to teach and troubleshoot:
 
 - `scripts/diagnosis/09_check_environment.py` - checks API access, Atlas connectivity, collection, and vector index without printing secrets.
 - `scripts/diagnosis/10_inspect_vector_store.py` - shows counts, embedding dimensions, models, metadata, and safe text previews.
+- `scripts/diagnosis/11_check_vector_search_health.py` - checks the Atlas index and can run a live vector-search query.
 - `scripts/diagnosis/17_mock_rag_pipeline.py` - demonstrates parsing, chunking, retrieval, and source references without API keys or MongoDB.
 
 Try the no-cloud demo first:
@@ -32,7 +33,10 @@ After configuring `.env`, diagnose the cloud setup:
 ```powershell
 .\\.venv\\Scripts\\python scripts/diagnosis/09_check_environment.py
 .\\.venv\\Scripts\\python scripts/diagnosis/10_inspect_vector_store.py
+.\\.venv\\Scripts\\python scripts/diagnosis/11_check_vector_search_health.py --query "What does this guide explain?"
 ```
+
+Script 11 is the runtime check: script 09 checks the general environment, script 10 inspects stored data, and script 11 verifies that Atlas can actually serve vector search.
 
 ## Setup
 
