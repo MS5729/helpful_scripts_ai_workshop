@@ -2,6 +2,8 @@
 
 A progressive, runnable RAG starter kit. Begin with the no-AI scripts; add an OpenAI-compatible API and MongoDB Atlas for the later exercises.
 
+Presenter guide: [40-minute AI workshop presenter script](docs/40_MINUTE_AI_WORKSHOP_PRESENTER_SCRIPT.md)
+
 ## Workshop progression
 
 1. `scripts/01_parser_no_ai.py` - extract text and metadata from local files.
