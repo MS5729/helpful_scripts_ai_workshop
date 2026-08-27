@@ -13,6 +13,27 @@ A progressive, runnable RAG starter kit. Begin with the no-AI scripts; add an Op
 7. `scripts/07_retrieval_agent.py` - retrieve relevant chunks with metadata filters.
 8. `scripts/08_rag_pipeline.py` - complete retrieve-and-answer RAG flow with citations.
 
+## Diagnosis and beginner utilities
+
+These scripts make the workshop easier to teach and troubleshoot:
+
+- `scripts/diagnosis/09_check_environment.py` - checks API access, Atlas connectivity, collection, and vector index without printing secrets.
+- `scripts/diagnosis/10_inspect_vector_store.py` - shows counts, embedding dimensions, models, metadata, and safe text previews.
+- `scripts/diagnosis/17_mock_rag_pipeline.py` - demonstrates parsing, chunking, retrieval, and source references without API keys or MongoDB.
+
+Try the no-cloud demo first:
+
+```powershell
+.\\.venv\\Scripts\\python scripts/diagnosis/17_mock_rag_pipeline.py sample_data/guide.txt "What does this guide explain?"
+```
+
+After configuring `.env`, diagnose the cloud setup:
+
+```powershell
+.\\.venv\\Scripts\\python scripts/diagnosis/09_check_environment.py
+.\\.venv\\Scripts\\python scripts/diagnosis/10_inspect_vector_store.py
+```
+
 ## Setup
 
 ```powershell
